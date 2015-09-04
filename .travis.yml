@@ -4,7 +4,13 @@ node_js:
   - 'iojs'
   - '0.12'
   - '0.10'
-
 before_script:
   - 'npm install -g bower grunt-cli'
   - 'bower install'
+deploy:
+  provider: releases
+  api_key: "6531bf939249436fd845728e6bb25e809b7b002b"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true
